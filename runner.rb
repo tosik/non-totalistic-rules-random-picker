@@ -1,14 +1,17 @@
 #!/usr/bin/env ruby
 
 output_path = ARGV[0]
+inital_rule = ARGV[1]
 if output_path == nil
-  puts "Usage\n  ./runner.rb <output Golly RLE path>"
+  puts "Usage\n  ./runner.rb <output Golly RLE path> [initial rule]"
   exit -1
 end
 
-random = `ruby non-totalistic-rules-random-picker.rb`.chomp
-
-random = "B3/S23"
+if inital_rule == nil
+  random = `ruby non-totalistic-rules-random-picker.rb`.chomp
+else
+  random = inital_rule
+end
 
 while true do
   puts "Press <Enter> to generate rle file (#{output_path})."
