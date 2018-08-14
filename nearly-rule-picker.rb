@@ -40,8 +40,13 @@ shuffled = parsed
   letters = table["#{where + 1}"]
   what = letters.split("").sample(rand(letters.size + 1)).uniq.join
 
-  shuffled[which][where][0] = "#{where + 1}"
-  shuffled[which][where][1] = what
+  if rand(10) == 1
+    shuffled[which][where][0] = nil
+    shuffled[which][where][1] = nil
+  else
+    shuffled[which][where][0] = "#{where + 1}"
+    shuffled[which][where][1] = what
+  end
 end
 
 puts "B#{shuffled[0].join}/S#{shuffled[1].join}"
