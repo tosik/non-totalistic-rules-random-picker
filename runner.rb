@@ -8,6 +8,8 @@ end
 
 random = `ruby non-totalistic-rules-random-picker.rb`.chomp
 
+random = "B3/S23"
+
 while true do
   puts "Press <Enter> to generate rle file (#{output_path})."
   STDIN.gets

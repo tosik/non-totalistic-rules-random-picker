@@ -1,5 +1,4 @@
 input_rule = gets
-#input_rule = "B2in3eaiyqjr4einqjt5ceaqjr6kin78/S12c3ceiyj4kaytw5ceknjr6ckai7ce8"
 
 parsed = input_rule.split('/').map {|a|
   a.gsub(/[BS]/, "")
@@ -41,6 +40,7 @@ shuffled = parsed
   letters = table["#{where + 1}"]
   what = letters.split("").sample(rand(letters.size + 1)).uniq.join
 
+  shuffled[which][where][0] = "#{where + 1}"
   shuffled[which][where][1] = what
 end
 
