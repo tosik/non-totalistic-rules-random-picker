@@ -1,8 +1,6 @@
-random = `ruby non-totalistic-rules-random-picker.rb`
-
 puts <<EOS
 #CXRLE Pos=0,0
-x = 328, y = 264, rule = #{random}
+x = 328, y = 264, rule = #{gets}
 b4ob2ob2obo3bobobob5obobobo3bo2b3o2bo2bo3b2obo2b4ob2o4bob2ob4ob3o4b3o
 2b3o6bo3b2o2bo3b2o3bo6b2obob3o2bo2bobobo7bob4o3bo7b2o5bob4o2bob2o3bob
 2o4b2o2b2o3bobo4b2o3bobo3bob4o2bobobob4ob6ob2o2b3obo8bo4b2o2bob5ob3o3b
